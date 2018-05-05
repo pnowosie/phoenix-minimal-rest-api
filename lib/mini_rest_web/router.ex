@@ -14,13 +14,8 @@ defmodule MiniRestWeb.Router do
   end
 
   scope "/", MiniRestWeb do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :api # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", ApiController, :index
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", MiniRestWeb do
-  #   pipe_through :api
-  # end
 end
